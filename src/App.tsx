@@ -1,11 +1,8 @@
 import "./App.css";
+import ChatbotLanding from "./components/LandingPage";
 
 function App() {
-  return (
-    <div>
-      <h1 className="text-3xl font-bold underline">Hello there</h1>
-    </div>
-  );
+  return <ChatbotLanding />;
 }
 
 export default App;
