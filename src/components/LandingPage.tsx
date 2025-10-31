@@ -1,21 +1,21 @@
 import { motion } from "framer-motion";
 import { Brain, ArrowRight } from "lucide-react";
 
-export default function ChatbotLanding() {
+export default function LandingPage() {
   return (
     <div className="min-h-screen bg-linear-to-br from-white via-blue-50 to-purple-50 flex flex-col">
       {/* Header */}
       <header className="w-full flex justify-between items-center px-8 py-4">
         <div className="flex items-center space-x-2">
           <Brain className="w-8 h-8" />
-          <h1 className="text-2xl font-extrabold tracking-tight">CoachAI</h1>
+          <h1 className="text-2xl font-extrabold tracking-tight">CoachA1</h1>
         </div>
         <nav className="hidden md:flex space-x-8 font-medium">
           <a className="hover:text-blue-600 transition" href="#features">
             Features
           </a>
           <a className="hover:text-blue-600 transition" href="#why">
-            Why CoachAI
+            Why CoachA1
           </a>
           <a className="hover:text-blue-600 transition" href="#contact">
             Contact
@@ -37,7 +37,7 @@ export default function ChatbotLanding() {
         >
           <h2 className="text-5xl md:text-6xl font-extrabold leading-tight text-gray-900">
             Become the Best Version of You with{" "}
-            <span className="text-blue-600">CoachAI</span>
+            <span className="text-blue-600">CoachA1</span>
           </h2>
           <p className="text-lg text-gray-700 max-w-lg">
             Your personal AI mentor for fitness, productivity, learning,
@@ -56,7 +56,7 @@ export default function ChatbotLanding() {
           className="bg-white shadow-2xl rounded-2xl p-6 w-full max-w-md space-y-4 border border-gray-200"
         >
           <div className="bg-gray-100 p-4 rounded-xl w-fit max-w-[80%] shadow">
-            👋 Hey! I'm CoachAI — here to push you to greatness.
+            👋 Hey! I'm CoachA1 — here to push you to greatness.
           </div>
           <div className="bg-blue-600 text-white p-4 rounded-xl w-fit self-end max-w-[80%] shadow">
             Help me build discipline.
@@ -72,7 +72,7 @@ export default function ChatbotLanding() {
       </section>
       {/* Footer */}
       <footer className="w-full text-center p-4 text-gray-500 text-sm">
-        © {new Date().getFullYear()} CoachAI — Unlock Your Potential
+        © {new Date().getFullYear()} CoachA1 — Unlock Your Potential
       </footer>
     </div>
   );
