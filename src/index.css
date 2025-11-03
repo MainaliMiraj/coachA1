@@ -1,1 +1,11 @@
-@import "tailwindcss"
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Barlow", sans-serif;
+}
+
+/* Global font + bigger base size */
+html {
+  font-family: var(--font-sans);
+  font-size: 18px; /* ✅ correct way */
+}

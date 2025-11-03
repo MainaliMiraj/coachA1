@@ -1,21 +1,13 @@
-import HeaderComponent from "./HomePageComponents/header";
 import HeroComponent from "./HomePageComponents/HeroSection";
-import FooterComponent from "./HomePageComponents/FooterComponent";
-import FitnessOnboarding from "./OnBoarding/FitnessOnBoarding";
 
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export default function LandingPage() {
-  const [startJourney, setStartJourney] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-linear-to-br from-white via-blue-50 to-purple-50 flex flex-col">
-      <HeaderComponent />
-      {startJourney ? (
-        <FitnessOnboarding />
-      ) : (
-        <HeroComponent onStart={() => setStartJourney(true)} />
-      )}
-      <FooterComponent />
+      <HeroComponent onStart={() => navigate("/onboarding")} />
     </div>
   );
 }

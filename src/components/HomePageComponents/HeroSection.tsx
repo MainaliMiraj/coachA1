@@ -1,7 +1,9 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-export default function HeroSection({ onStart }: Readonly<{ onStart: () => void }>) {
+export default function HeroSection({
+  onStart,
+}: Readonly<{ onStart: () => void }>) {
   return (
     <section className="flex flex-col md:flex-row items-center justify-center flex-1 px-8 py-10 gap-10">
       {/* Text */}
@@ -21,7 +23,7 @@ export default function HeroSection({ onStart }: Readonly<{ onStart: () => void 
         </p>
         <button
           onClick={onStart}
-          className="flex items-center space-x-2 px-8 py-3 text-lg bg-blue-600 text-white rounded-2xl shadow-lg hover:scale-105 transition w-fit"
+          className="flex items-center space-x-2 px-8 py-3 text-lg bg-blue-600 text-white rounded-2xl shadow-lg hover:scale-105 transition w-fit cursor-pointer"
         >
           <span>Start Your Journey</span>
           <ArrowRight />
