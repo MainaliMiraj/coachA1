@@ -1,9 +1,7 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
-export default function DietWizard({
-  onBack,
-}: Readonly<{ onBack: () => void }>) {
+export default function DietWizard({ onBack }: { onBack: () => void }) {
   const [goal, setGoal] = useState("");
   const [food, setFood] = useState("");
   const [submitted, setSubmitted] = useState(false);

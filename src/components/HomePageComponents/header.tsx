@@ -12,20 +12,23 @@ export default function HeaderComponent() {
     <header className="w-full flex justify-between items-center px-8 py-4">
       {/* Logo section — navigates to home */}
 
-      <Link to="/" className="flex items-center space-x-2 cursor-pointer">
+      <Link
+        to="/"
+        className="flex items-center space-x-2 cursor-pointer hover:scale-105 transition"
+      >
         <Brain className="w-8 h-8" />
         <h1 className="text-2xl font-extrabold tracking-tight">CoachA1</h1>
       </Link>
 
       {/* Navigation links */}
       <nav className="hidden md:flex space-x-8 font-medium">
-        <a className="hover:text-blue-600 transition" href="#features">
+        <a className="hover:scale-105 transition px-2" href="#features">
           Features
         </a>
-        <a className="hover:text-blue-600 transition" href="#why">
+        <a className="hover:scale-105 transition px-2" href="#why">
           Why CoachA1
         </a>
-        <a className="hover:text-blue-600 transition" href="#contact">
+        <a className="hover:scale-105 transition px-2 " href="#contact">
           Contact
         </a>
       </nav>
@@ -36,7 +39,7 @@ export default function HeaderComponent() {
           <button
             key={btn.path}
             onClick={() => navigate(btn.path)}
-            className="px-6 py-2 border border-black font-medium hover:bg-blue-800 hover:text-white transition md:ml-1 cursor-pointer"
+            className="px-6 py-2  font-medium hover:scale-105 hover:bg-black transition md:ml-1 cursor-pointerrounded cursor-pointer hover:text-white rounded"
           >
             {btn.label}
           </button>

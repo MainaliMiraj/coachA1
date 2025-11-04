@@ -3,9 +3,9 @@ import { Button } from "@/components/ui/button";
 
 export default function ChoosePath({
   onSelect,
-}: Readonly<{
+}: {
   onSelect: (v: "workout" | "diet") => void;
-}>) {
+}) {
   return (
     <div className="space-y-6 text-center">
       <h1 className="text-2xl font-bold text-gray-900 mb-4">
@@ -14,9 +14,9 @@ export default function ChoosePath({
 
       <div className="space-y-4">
         <Button
-          className="w-full text-lg py-6 flex items-center justify-center gap-3 rounded-xl 
-          border border-gray-200 bg-white hover:border-blue-500 hover:bg-blue-50 transition-all duration-200
-          hover:scale-[1.02]"
+          className="w-full text-lg py-6 flex items-center justify-center gap-3 
+            bg-white hover:bg-black hover:text-white transition-all duration-100
+          hover:scale-[1.01] cursor-pointer"
           variant="outline"
           onClick={() => onSelect("workout")}
         >
@@ -24,9 +24,9 @@ export default function ChoosePath({
         </Button>
 
         <Button
-          className="w-full text-lg py-6 flex items-center justify-center gap-3 rounded-xl 
-          border border-gray-200 bg-white hover:border-green-500 hover:bg-green-50 transition-all duration-200
-          hover:scale-[1.02]"
+          className="w-full text-lg py-6 flex items-center justify-center gap-3 
+           bg-white hover:bg-black transition-all duration-150
+          hover:scale-[1.01] hover:text-white cursor-pointer"
           variant="outline"
           onClick={() => onSelect("diet")}
         >

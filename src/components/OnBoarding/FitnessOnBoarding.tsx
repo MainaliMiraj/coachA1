@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, CardContent } from "@/components/ui/card";
 import { X } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 import ChoosePath from "./steps/ChoosePath";
 import WorkoutWizard from "./steps/WorkoutWizard";
@@ -15,12 +16,14 @@ export default function FitnessOnboarding() {
     <div className="min-h-screen flex items-center justify-center p-6 bg-gray-50 relative">
       <Card className="w-full max-w-xl shadow-xl relative">
         {/* Close button */}
-        <button
+        <Button
           onClick={() => navigate("/")}
-          className="absolute right-3 top-3 bg-white/80 backdrop-blur-md rounded-full p-2 shadow hover:scale-110 active:scale-95 transition-all duration-200 hover:bg-blue-600 cursor-pointer "
+          variant="ghost"
+          size="icon"
+          className="p-2 cursor-pointer absolute top-4 right-4  hover:scale-110 transition"
         >
-          <X className="w-4 h-4 text-black hover:text-white" />
-        </button>
+          <X className="w-4 h-4 text-black " />
+        </Button>
 
         <CardContent className="p-8 space-y-6">
           {step === "choose" && <ChoosePath onSelect={setStep} />}
