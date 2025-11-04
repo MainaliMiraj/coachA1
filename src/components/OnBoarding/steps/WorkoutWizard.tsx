@@ -35,12 +35,11 @@ export default function WorkoutWizard({
       setLoading(true);
 
       const finalData = { ...form, [key]: opt } as WorkoutForm;
-      console.log("SEND TO AI:", finalData);
+      // console.log("Sending data for analysis:", finalData);
 
       try {
-        const aiResponse = await generateWorkoutPlan(finalData);
-        console.log("AI RESULT:", aiResponse);
-        setWorkoutPlan(aiResponse);
+        const response = await generateWorkoutPlan(finalData);
+        setWorkoutPlan(response);
       } catch (err) {
         console.error("Something went wrong...", err);
       } finally {
@@ -56,7 +55,7 @@ export default function WorkoutWizard({
       return (
         <div className="text-center animate-pulse py-20">
           <h2 className="text-xl font-bold">Creating your workout plan...</h2>
-          <p className="text-gray-500 mt-2">AI is thinking 🧠💪</p>
+          <p className="text-black mt-2">Generating Your Plan...💪</p>
         </div>
       );
     }
