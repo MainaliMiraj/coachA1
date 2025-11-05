@@ -51,5 +51,5 @@ The JSON format MUST be:
     res.status(500).json({ error: "Something Went wrong" });
   }
 });
-
-app.listen(3001, () => console.log("Server running on 3001 ✅"));
+const PORT=process.env.PORT || 3001;
+app.listen(PORT, () => console.log(`Server running on ${PORT} ✅`));
